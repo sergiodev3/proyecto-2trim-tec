@@ -15,34 +15,41 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 5px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px;
+    display: block;
 }
 
+/* Hero Section */
 .hero {
     background: url('https://via.placeholder.com/1200x400') no-repeat center;
     background-size: cover;
     text-align: center;
-    padding: 100px 20px;
+    padding: 60px 10px;
     color: white;
 }
 
+/* Secciones */
 section {
-    padding: 40px;
+    padding: 20px;
     text-align: center;
 }
 
+/* Carrusel */
 .carousel {
     position: relative;
     width: 60%;
+    max-width: 600px;
     margin: auto;
     overflow: hidden;
 }
@@ -56,6 +63,7 @@ section {
     display: block;
 }
 
+/* Botones */
 button {
     background: #007BFF;
     color: white;
@@ -63,16 +71,20 @@ button {
     padding: 10px 20px;
     margin-top: 10px;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 button:hover {
     background: #0056b3;
 }
 
+/* Formulario */
 form {
     display: flex;
     flex-direction: column;
     width: 50%;
+    max-width: 400px;
     margin: auto;
 }
 
@@ -92,9 +104,33 @@ form button:hover {
     background: #218838;
 }
 
+/* Footer */
 footer {
     background: #222;
     color: white;
     text-align: center;
     padding: 10px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 40px 10px;
+        background-size: cover;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
